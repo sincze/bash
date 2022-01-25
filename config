@@ -1,0 +1,19 @@
+# CONFIG FILE that will be used in BASH scripts
+# Is placed in DIR_SCRIPTS directory
+
+DEBUG="true"
+
+DIR_TEMP="/var/tmp"
+DIR_LOG="/var/log"
+DIR_SCRIPTS="/home/pi/domoticz/scripts/system"
+
+DOMOTICZ_IP="127.0.0.1"
+DOMOTICZ_PORT="8080"
+
+#------------------------------------------
+# TELEGRAM SETTINGS
+#------------------------------------------
+
+TELEGRAM_TOKEN="<bot token>"
+TELEGRAM_ID="<group-id>"
+TELEGRAM_URL="https://api.telegram.org/bot$TELEGRAM_TOKEN/sendMessage"
