@@ -3,6 +3,7 @@
 # Script to report SSH logins using Telegrambot.
 # Modified By: Sándor Incze
 # Version 1.0 (24-01-2022)
+# Version 1.1 (25-01-2022) included a config file
 #
 # The file should be located here: /usr/local/bin/notify-on-ssh-login.sh
 # Execute the following commands after downloading in /usr/local/bin/ directory:
@@ -13,14 +14,13 @@
 #
 # Now every SSH login will trigger a message via Telegram
 
-TOKEN="<TELEGRAM BOT TOKEN>"
-ID="<TELEGRAM GROUP ID>"
-URL="https://api.telegram.org/bot$TOKEN/sendMessage"
+# CONFIG File
+source /home/pi/domoticz/scripts/system/config
 
 if [ "$PAM_TYPE" != "open_session" ]
 then
         exit 0
 else
-        curl -s -X POST $URL -d chat_id=$ID -d text="$(echo -e "Host: `hostname`\nUser: $PAM_USER\nHost: $PAM_RHOST")" > /dev/null 2>&1
+        curl -s -X POST $TELEGRAM_URL -d chat_id=$TELEGRAM_ID -d text="$(echo -e "Host: `hostname`\nUser: $PAM_USER\nHost: $PAM_RHOST")" > /dev/null 2>&1
         exit 0
 fi
