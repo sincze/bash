@@ -41,7 +41,7 @@ curl -s -X POST $TELEGRAM_URL -d chat_id=$TELEGRAM_ID -d text="$(echo -e "The ex
 logger -t ipcheck -- IP changed to $CURRENT_IP
 else
 
-#If not just report that it stayed the same
-curl -s -X POST $TELEGRAM_URL -d chat_id=$TELEGRAM_ID -d text="$(echo -e "The external IP Address of $HOSTNAME is still the same. The IP address stayed the same $CURRENT_IP")" > /dev/null 2>&1
+#If not just report that it stayed the same, comment out if you don't want to have an update ;-)
+#curl -s -X POST $TELEGRAM_URL -d chat_id=$TELEGRAM_ID -d text="$(echo -e "The external IP Address of $HOSTNAME is still the same. The IP address stayed the same $CURRENT_IP")" > /dev/null 2>&1
 logger -t ipcheck -- NO IP change
 fi
