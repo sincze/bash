@@ -10,6 +10,9 @@ DIR_SCRIPTS="/home/pi/domoticz/scripts/system"
 DOMOTICZ_IP="127.0.0.1"
 DOMOTICZ_PORT="8080"
 
+MINDERGAS_API="xxxxxxxx"
+GAS_IDX="20"
+
 WAN_IP_IDX="33"
 WAN_IP_VAR="1"
 
