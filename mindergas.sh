@@ -24,7 +24,7 @@ TOKEN=$MINDERGAS_API
 IDX=$GAS_IDX
 
 #fetch meterstand
-METERSTAND=`curl -s --connect-timeout 2 --max-time 5 "Accept: application/json" "http://$DOMOTICZ_IP:$DOMOTICZ_PORT/json.htm?type=devices&r>
+METERSTAND=`curl -s --connect-timeout 2 --max-time 5 "Accept: application/json" "http://$DOMOTICZ_IP:$DOMOTICZ_PORT/json.htm?type=devices&rid=$IDX"  | /bin/grep '"Counter" :' | awk {'print $3'} | /usr/bin/cut -d '"' -f 2`
 if [ $METERSTAND ] ; then
 #   echo $METERSTAND
 
