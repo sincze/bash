@@ -8,3 +8,4 @@ Several Bash Scripts:<br/>
 **notify-on-ssh-login.sh** : Monitors if somebody logged in via SSH and reports via Telegram.<br/>
 **ssh.sh** : Monitors with use of Monit if SSH is still running, if not restarts and reports via Telegram.<br/>
 **mindergas.sh** : Will upload your GAS meter to mindergas.nl.<br/>
+**sshcheck.sh** : Checks if remote SSH is still up and running, else sends telegram message.<br/>
