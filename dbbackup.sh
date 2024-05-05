@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Script to Backup the Domoticz Database via Telegram
+#
+# Author: Sándor Incze
+# Version 1.0 (05-05-2024)
+#
+# Works with Raspberry Pi
+# Execute the following commands after downloading in /home/pi/domoticz/system/ directory:
+# $ chmod +x dbbackup.sh
+#
+# $ sudo nano /etc/crontab
+# Execute the Script first of the month.
+# 30 0 1 * *      root    /home/pi/domoticz/scripts/system/dbbackup.sh >/dev/null 2>&1
+#
+
 # Source configuration file
 source /home/pi/domoticz/scripts/system/config
 
