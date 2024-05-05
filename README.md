@@ -9,3 +9,6 @@ Several Bash Scripts:<br/>
 **ssh.sh** : Monitors with use of Monit if SSH is still running, if not restarts and reports via Telegram.<br/>
 **mindergas.sh** : Will upload your GAS meter to mindergas.nl.<br/>
 **sshcheck.sh** : Checks if remote SSH is still up and running, else sends telegram message.<br/>
+**vpnmonitor.sh** : Checks if somebody logged in via the OpenVPN and remort that via Telegram message.<br/>
+**dbbackup.sh** : Make a compressed backup of the Domoticz.DB and send the file via Telegram message.<br/>
+
