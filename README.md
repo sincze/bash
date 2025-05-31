@@ -11,4 +11,5 @@ Several Bash Scripts:<br/>
 **sshcheck.sh** : Checks if remote SSH is still up and running, else sends telegram message.<br/>
 **vpnmonitor.sh** : Checks if somebody logged in via the OpenVPN and remort that via Telegram message.<br/>
 **dbbackup.sh** : Make a compressed backup of the Domoticz.DB and send the file via Telegram message.<br/>
+**docker-prune.sh** : Cleans Disk Space from old Docker Images.<br/>
 
