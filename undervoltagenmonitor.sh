@@ -51,7 +51,7 @@ check_undervoltage() {
     local entry_date=$(date -d '1 minute ago' "+%b %e %H:%M")
 
     # Use journalctl (preferred) or fallback to syslog
-#    local logs=$(journalctl -b --since "1 minute ago" 2>/dev/null | grep "Undervoltage detected")
+    local logs=$(journalctl -b --since "1 minute ago" 2>/dev/null | grep "Undervoltage detected")
     # DEBUG
 #    local logs=$(journalctl --since "24 hours ago" 2>/dev/null | grep "Undervoltage detected")
 
