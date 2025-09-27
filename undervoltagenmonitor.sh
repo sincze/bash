@@ -14,23 +14,6 @@
 # Add this line: * * * * *   root   /home/pi/scripts/undervoltagemonitor.sh >/dev/null 2>&1
 #
 
-
-# Source the config file
-source /home/pi/scripts/config
-
-# Export the variables
-export TELEGRAM_TOKEN TELEGRAM_ID
-
-# Function to send Telegram notification
-send_notification() {
-    local message="$1"
-    curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendMessage" \
-        -d "chat_id=$TELEGRAM_ID" \
-        -d "text=${message}" >/dev/null
-}
-
-#!/bin/bash
-
 # Source the config file
 source /home/pi/scripts/config
 
